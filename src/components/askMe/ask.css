@@ -1,0 +1,45 @@
+.qna .section-title {
+  margin-block-end: 16px;
+}
+
+.qna-list {
+  margin-block-start: 60px;
+  display: grid;
+  gap: 16px;
+}
+
+.qna-card {
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-6);
+  overflow: hidden;
+}
+
+.qna-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  padding: 20px;
+}
+
+.qna-card.active .qna-btn {
+  background-color: var(--gunmetal);
+}
+
+.qna-card.active .qna-btn > * {
+  color: var(--blue-violet);
+}
+
+.qna-content .body-md {
+  padding: 20px;
+}
+
+.qna-content {
+  display: none;
+}
+
+.qna-card.active .qna-content {
+  display: block;
+}

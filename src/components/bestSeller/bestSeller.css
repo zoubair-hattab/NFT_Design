@@ -1,0 +1,62 @@
+.seller-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.seller-card .card-banner {
+  position: relative;
+  background-color: var(--oxford-blue);
+}
+
+.seller-card .card-banner img {
+  border-radius: inherit;
+}
+
+.seller-card .card-banner ion-icon {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 2rem;
+  color: var(--green-cyan);
+}
+
+.seller-card .user-name {
+  margin-block-start: 2px;
+}
+
+.seller-card .btn-icon {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+  border: 1px solid var(--blue-violet_a10);
+  background-color: var(--bg, var(--blue-violet_a5));
+  color: var(--color, var(--blue-violet));
+  transition: var(--transition-1);
+}
+
+.seller-card .btn-icon ion-icon {
+  color: var(--color);
+  --ionicon-stroke-width: 55px;
+}
+
+.seller-card .btn-icon:is(:hover, :focus-visible) {
+  --bg: var(--blue-violet);
+  --color: var(--white);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
