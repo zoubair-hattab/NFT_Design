@@ -1,0 +1,164 @@
+.top-collection .title-wrapper .btn-link {
+  display: none;
+}
+
+.top-collection .slider {
+  --slider-item: 1;
+
+  position: relative;
+  margin-inline: -8px;
+  padding: 4px 12px;
+  overflow-x: hidden;
+}
+
+.top-collection .slider-container {
+  position: relative;
+  display: flex;
+  transition: transform 300ms ease;
+}
+
+.top-collection .slider-item {
+  min-width: calc(100% / var(--slider-item));
+  width: calc(100% / var(--slider-item));
+  padding-inline: 12px;
+}
+
+.collection-card {
+  padding: 12px;
+  box-shadow: var(--shadow-1);
+}
+
+.collection-card .card-content {
+  padding: 16px;
+}
+
+.collection-card .card-profile {
+  position: relative;
+  width: 64px;
+  margin-block-start: -50px;
+  box-shadow: var(--shadow-2);
+  background-color: var(--oxford-blue);
+}
+
+.collection-card .card-profile img {
+  border-radius: var(--radius-6);
+}
+
+.collection-card .card-profile .check {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  color: var(--white);
+  font-size: 2.3rem;
+}
+
+.collection-card .card-title {
+  margin-block-start: 12px;
+}
+
+.collection-card .card-author {
+  display: flex;
+  gap: 2px;
+  font-style: italic;
+}
+
+.collection-card .card-author .link {
+  font-style: normal;
+  color: var(--blue-violet);
+}
+
+.collection-card .card-text {
+  margin-block-start: 4px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--oxford-blue-2);
+  font-size: 1.7rem;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.slider-btn:is(:hover, :focus-visible) {
+  background-color: var(--blue-violet);
+}
+
+.slider-btn:disabled {
+  display: none;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.top-collection .container > .btn-link {
+  margin-inline: auto;
+  margin-block-start: 32px;
+}
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+  /**
+     * TOP COLLECTION
+     */
+
+  .top-collection .title-wrapper .btn-link {
+    display: flex;
+    margin: 0;
+  }
+
+  .top-collection .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .top-collection .slider {
+    --slider-item: 2;
+
+    margin-inline: -16px;
+    padding-inline: 8px;
+  }
+
+  .top-collection .slider-item {
+    padding-inline: 12px;
+  }
+
+  .top-collection .container > .btn-link {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  /**
+     * TOP COLLECTION
+     */
+
+  .top-collection .slider {
+    --slider-item: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  /**
+     * TOP COLLECTION
+     */
+
+  .top-collection .slider {
+    --slider-item: 4;
+  }
+}
